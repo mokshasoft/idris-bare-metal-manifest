@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+     Copyright 2019, Mokshasoft AB (mokshasoft.com)
+
+     This software may be distributed and modified according to the terms of
+     the BSD 2-Clause license. Note that NO WARRANTY is provided.
+     See "LICENSE_BSD2.txt" for details.
+-->
+<manifest>
+
+<remote
+    name="mokshasoft"
+    fetch="https://github.com/mokshasoft/"/>
+
+<!-- include core parts -->
+<project
+    name="bare-metal-idris-core.git"
+    path="core"
+    revision="master"
+    remote="mokshasoft"/>
+
+<!-- include the Idris RTS -->
+<project
+    name="idris-rts.git"
+    path="libs/idris-rts"
+    revision="master"
+    remote="mokshasoft">
+    <linkfile
+        src="rts/bare-metal/CMakeLists.txt"
+        dest="libs/idris-rts/CMakeLists.txt"/>
+</project>
+
+<!-- include Idris drivers -->
+<project
+    name="bare-metal-idris-drivers.git"
+    path="drivers"
+    revision="master"
+    remote="mokshasoft"/>
+
+<!-- include Idris apps -->
+<project
+    name="bare-metal-idris-apps.git"
+    path="apps"
+    revision="master"
+    remote="mokshasoft">
+    <linkfile src="core/tools/top-level.cmake" dest="CMakeLists.txt"/>
+</project>
+
+</manifest>
