@@ -17,7 +17,11 @@
     name="bare-metal-idris-core.git"
     path="core"
     revision="master"
-    remote="mokshasoft"/>
+    remote="mokshasoft">
+    <linkfile
+        src="tools/top-level.cmake"
+        dest="CMakeLists.txt"/>
+</project>
 
 <!-- include the Idris RTS -->
 <project
@@ -42,8 +46,6 @@
     name="bare-metal-idris-apps.git"
     path="apps"
     revision="master"
-    remote="mokshasoft">
-    <linkfile src="core/tools/top-level.cmake" dest="CMakeLists.txt"/>
-</project>
+    remote="mokshasoft"/>
 
 </manifest>
