@@ -19,7 +19,7 @@
     revision="master"
     remote="mokshasoft">
     <linkfile
-        src="tools/top-level.cmake"
+        src="cmake/top-level.cmake"
         dest="CMakeLists.txt"/>
 </project>
 

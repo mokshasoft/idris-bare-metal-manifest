@@ -18,7 +18,7 @@ To build:
 ```
 mkdir build
 cd build
-cmake -G Ninja -DCMAKE_TOOLCHAIN_FILE=../core/tools/gcc-toolchain.cmake ..
+cmake -G Ninja -DCMAKE_TOOLCHAIN_FILE=../core/cmake/gcc-toolchain.cmake ..
 ninja hello-world
 ```
 
