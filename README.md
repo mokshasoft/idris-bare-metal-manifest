@@ -12,7 +12,7 @@ repo sync
 ```
 
 ## Build it
-To build:
+To build, add -DPLATFORM=beaglebone to the cmake command to build for BeagleBone Black:
 
 
 ```
